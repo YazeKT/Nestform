@@ -1,0 +1,33 @@
+# Dependencies and generated application output
+node_modules/
+out/
+release/
+native/build/
+
+# Downloaded build dependencies
+vendor/boost_1_62_0/
+vendor/boost_1_62_0.7z
+vendor/*.tmp
+
+# Runtime and validation data
+validation/
+*.log
+*.dmp
+
+# Environment, credentials and signing material
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.cer
+*.key
+*.pem
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+

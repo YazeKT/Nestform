@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3in" height="2in" viewBox="0 0 216 144">
+  <rect id="rectangle" x="10" y="10" width="72" height="36" fill="none" stroke="black"/>
+  <circle id="circle" cx="115" cy="28" r="18" fill="none" stroke="black"/>
+  <path id="triangle" d="M150 46 L186 46 L168 10 Z" fill="none" stroke="black"/>
+</svg>

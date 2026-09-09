@@ -1,0 +1,56 @@
+name: Windows verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-windows:
+    name: verify-windows
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install pinned dependencies
+        run: npm ci
+      - name: Install Electron runtime
+        run: npm run runtime:install
+      - name: Download and verify Boost
+        run: npm run bootstrap:win
+      - name: Build native engine
+        run: npm run native:build
+      - name: Verify DCO sign-off
+        if: github.event_name == 'pull_request'
+        run: node scripts/check-dco.cjs
+      - name: Verify application
+        run: npm run verify
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+      - name: Upload failure logs
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-verification-logs
+          path: |
+            *.log
+            native/**/*.log
+          if-no-files-found: ignore
+          retention-days: 7
+

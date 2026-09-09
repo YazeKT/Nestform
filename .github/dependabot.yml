@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      react-ui:
+        patterns: ["react", "react-dom", "@types/react", "@types/react-dom", "lucide-react"]
+      build-tooling:
+        patterns: ["vite", "@vitejs/*", "typescript", "prettier"]
+    ignore:
+      - dependency-name: electron
+      - dependency-name: electron-vite
+      - dependency-name: node-addon-api
+      - dependency-name: node-gyp
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+

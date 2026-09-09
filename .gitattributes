@@ -1,0 +1,14 @@
+* text=auto
+
+# These files are byte-for-byte preserved upstream sources. Their SHA-256
+# preservation tests must be independent of each contributor's autocrlf setting.
+src/renderer/public/engine/deepnest.js -text
+src/renderer/public/engine/svgparser.js -text
+vendor/legacy/background.js -text
+vendor/legacy/clippernode.js -text
+vendor/legacy/geometryutil.js -text
+vendor/legacy/minkowski.cc -text
+
+*.png binary
+*.ico binary
+*.woff2 binary

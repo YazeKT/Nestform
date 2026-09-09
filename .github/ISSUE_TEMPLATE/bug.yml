@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible Nestform problem.
+title: "[Bug]: "
+labels: [bug, triage]
+body:
+  - type: checkboxes
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and read the troubleshooting guide.
+          required: true
+        - label: This report contains no confidential client drawing or personal data.
+          required: true
+  - type: input
+    attributes:
+      label: Nestform version
+      placeholder: 0.4.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Installation type
+      options: [Installer, Portable, Development source]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Use a minimal non-confidential drawing where possible.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual behavior and evidence
+      description: Include exact errors, screenshots, and whether SVG or conversion-dependent formats are involved.
+    validations:
+      required: true
+

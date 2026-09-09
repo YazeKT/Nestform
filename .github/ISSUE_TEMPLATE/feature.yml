@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a focused product improvement.
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    attributes:
+      label: Manufacturing workflow
+      description: Explain who needs this and where it fits in Prepare, Nest, or Export.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Current limitation
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed result
+      description: State observable acceptance criteria without prescribing an implementation unless necessary.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Engine or compatibility impact
+      description: Note any effect on nesting behavior, units, formats, history, or existing files.
+

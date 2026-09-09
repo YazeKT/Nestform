@@ -1,0 +1,27 @@
+name: Performance report
+description: Report a repeatable speed, memory, or large-job problem.
+title: "[Performance]: "
+labels: [performance, triage]
+body:
+  - type: input
+    attributes:
+      label: Nestform and Windows version
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Job shape
+      description: Include part count, contour complexity, sheet count, rotations, gap, population, workers, and run duration. Do not attach confidential production files.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Measured behavior
+      description: Include actual timings, candidate count, memory use, and whether the UI remained responsive.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction material
+      description: Attach a minimized or synthetic SVG if available.
+

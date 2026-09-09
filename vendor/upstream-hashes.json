@@ -1,0 +1,26 @@
+[
+  {
+    "path": "src/renderer/public/engine/deepnest.js",
+    "sha256": "DD2E187ACE0BC8545D72AAC574C22357767786B50BB87C8410EB141D68437AC6"
+  },
+  {
+    "path": "src/renderer/public/engine/svgparser.js",
+    "sha256": "E6C9F7C6F95489266E7740A6DA90E7F9AC5150AA3ACF90E57CA042A04622C9C1"
+  },
+  {
+    "path": "vendor/legacy/background.js",
+    "sha256": "8E1C1F59975D73FE9BC4B99EE9D48BA982B0497EF72DD4615D46577244EF02FD"
+  },
+  {
+    "path": "vendor/legacy/clippernode.js",
+    "sha256": "CBA0F2324B600D143201CD446B93F44C89AD7B04B60F028E49CE6FF8FD0D2B80"
+  },
+  {
+    "path": "vendor/legacy/geometryutil.js",
+    "sha256": "2B818000DC018436A1D71F30E5EC43EA86D1CF2D7DC426FD6F88C48761C4B4C5"
+  },
+  {
+    "path": "vendor/legacy/minkowski.cc",
+    "sha256": "7B73156DD44CE7450EECCFF990236C144105331E96D8CAE4BF0C2639304BFC63"
+  }
+]
