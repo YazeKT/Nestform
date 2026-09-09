@@ -7,6 +7,7 @@
 - npm from the selected Node.js installation
 - Visual Studio 2022 Build Tools with Desktop development with C++ and a Windows SDK
 - Python supported by node-gyp
+- PowerShell 7 (`pwsh`)
 - Windows `tar` or 7-Zip for extracting the verified Boost archive
 
 ## Clean setup

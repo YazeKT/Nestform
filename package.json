@@ -22,7 +22,7 @@
     "dist": "npm run build && electron-builder --win portable",
     "release:win": "npm run build && electron-builder --win portable nsis",
     "bootstrap:win": "node scripts/bootstrap-win.cjs",
-    "source:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-source.ps1",
+    "source:win": "pwsh -NoProfile -File scripts/package-source.ps1",
     "runtime:install": "install-electron",
     "icon:build": "electron scripts/build-icon.cjs"
   },
