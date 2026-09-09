@@ -8,7 +8,7 @@ if (!baseRef) {
 
 const remoteBase = `origin/${baseRef}`;
 const mergeBase = execFileSync("git", ["merge-base", remoteBase, "HEAD"], { encoding: "utf8" }).trim();
-const records = execFileSync("git", ["log", "--format=%H%x1f%an%x1f%ae%x1f%B%x1e", `${mergeBase}..HEAD`], {
+const records = execFileSync("git", ["log", "--no-merges", "--format=%H%x1f%an%x1f%ae%x1f%B%x1e", `${mergeBase}..HEAD`], {
   encoding: "utf8",
 });
 const commits = records.split("\x1e").map((record) => record.trim()).filter(Boolean);
@@ -30,4 +30,3 @@ if (failures.length) {
 }
 
 console.log(`DCO sign-off verified for ${commits.length} commit(s).`);
-
