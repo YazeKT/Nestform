@@ -5,6 +5,7 @@
 - Prepared the public `YazeKT/Nestform` repository with reproducible Windows setup, GPL and upstream attribution, brand-use guidance, contributor governance, security reporting, pinned CI, CodeQL, Dependabot, protected-release automation, SBOM generation, checksums, and source packaging.
 - Made preservation tests self-contained so a fresh clone verifies retained upstream sources without the former parent checkout.
 - Prevented electron-builder from attempting an implicit GitHub publish so the reviewed release workflow remains the only artifact publisher.
+- Updated the packaged-app smoke test to target the current Settings control.
 
 ## 0.4.0 — 2026-09-08
 
