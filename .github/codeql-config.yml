@@ -1,0 +1,15 @@
+name: Nestform CodeQL configuration
+
+# Scan maintained application and native-engine source. These paths are generated,
+# downloaded during CI, test-only debugger harnesses, or retained upstream browser
+# utilities that are not loaded by the Nestform engine page.
+paths-ignore:
+  - out/**
+  - vendor/boost_1_62_0/**
+  - scripts/compare-images.mjs
+  - scripts/conversion-smoke.mjs
+  - scripts/reference-parity.mjs
+  - scripts/smoke.mjs
+  - src/renderer/public/engine/util/eval.js
+  - src/renderer/public/engine/util/ractive.js
+  - src/renderer/public/engine/util/svgpanzoom.js
