@@ -1,8 +1,9 @@
 name: Nestform CodeQL configuration
 
-# Scan maintained application and native-engine source. These paths are generated,
-# downloaded during CI, test-only debugger harnesses, or retained upstream browser
-# utilities that are not loaded by the Nestform engine page.
+# Scan maintained application and native-engine source. These exclusions scope
+# interpreted JavaScript that is generated, downloaded during CI, used only by
+# local debugger harnesses, or retained but not loaded by the engine page.
+# The traced C++ build still analyzes the native wrapper and included Boost headers.
 paths-ignore:
   - out/**
   - vendor/boost_1_62_0/**
