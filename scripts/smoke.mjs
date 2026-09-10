@@ -220,7 +220,7 @@ try {
   await engine.evaluate(
     "DeepNest.nests.forEach((n,i)=>n.mergedLength=smokeMergedLengths[i]);delete globalThis.smokeMergedLengths",
   );
-  await click(".settings-button");
+  await click('[title="Settings"]');
   await capture("04-settings.png");
   assert.ok(await c.evaluate("document.querySelector('dialog')?.open"));
   await click('dialog [aria-label="Close dialog"]');
