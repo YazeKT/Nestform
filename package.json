@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@fontsource-variable/outfit": "5.3.0",
-    "dompurify": "^3.2.7",
+    "dompurify": "^3.4.16",
     "lucide-react": "^0.468.0",
     "node-addon-api": "8.9.2",
     "react": "19.2.8",
